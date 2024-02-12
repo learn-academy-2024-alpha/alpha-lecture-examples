@@ -42,12 +42,39 @@ const dataTypesArray2 = ["string", "null", "Boolean", "string", "undefined"]
 
 // Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
 
+// /input : array -numbers
+// output: array - accum sums
+
+// iterate using map
+// take current value and add next value, the sum replaces the next value
+
+const accumulatingThing = (array) => {
+  let sum = 0
+  return array.map((number, index) => {
+    sum += number
+    console.log("sum:", sum, "index: ", index)
+    return sum
+  })
+}
+
+const secondThing = (array) => {
+  let sum = 0
+  return array.map((value) => (sum += value))
+}
+
+//  reduce(currVal, accumVal, 0)
+
+const something = array.reduce((curr, acc, 0))
+
 const accountTransactions1 = [100, -17, -23, -9]
 // Expected output: [100, 83, 60, 51]
 const accountTransactions2 = [250, -89, 100, -96]
 // Expected output: [250, 161, 261, 165]
 const accountTransactions3 = []
 // Expected output: []
+
+console.log(accumulatingThing(accountTransactions1))
+console.log(accumulatingThing(accountTransactions3))
 
 //Create a function that receives an array of numbers and returns an array containing only the positive numbers
 const numsArray2 = [-5, 10, -3, 12, -9, 5, 90, 0, 1]
