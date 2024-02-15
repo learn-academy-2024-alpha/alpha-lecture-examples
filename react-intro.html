@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+
+    <script type="text/babel">
+      const App = () => {
+        return (
+          <>
+            <h1>Hello World!</h1>
+            <h2>Hello Alpha!</h2>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </>
+        )
+      }
+
+      const Card = () => {
+        return (
+          <>
+            <img src="https://photos.zillowstatic.com/fp/65caa0a24f642c791f890e39d2a93bde-cc_ft_768.webp" />
+            <h3>$39,977,000</h3>
+            <Address />
+          </>
+        )
+      }
+
+      const Address = () => {
+        return (
+          <>
+            <p>2585 Calle Del Oro</p>
+            <p>La Jolla, CA 92037</p>
+          </>
+        )
+      }
+
+      // Uncaught SyntaxError: /Inline Babel script: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>?
+      // Did you want a JSX fragment - wrapper that doesn't create a node in the DOM tree
+      // JSX - JavaScript XML, JavaScript + HTML, looks and behaves like HTML almost all the time, JavaScript markup
+      const domContainer = document.querySelector("#react-container")
+      const root = ReactDOM.createRoot(domContainer)
+      // component invocation: <App />
+      root.render(<App />)
+    </script>
+  </body>
+</html>
