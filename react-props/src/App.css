@@ -1,0 +1,11 @@
+.card {
+  border: 2px dashed black;
+  height: 300px;
+  width: 200px;
+  padding: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
