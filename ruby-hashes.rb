@@ -74,15 +74,12 @@ person.delete(:last_name)
 # p person
 {:first_name=>"Buffy", :role=>"The Chosen One", :love_interests=>["Angelo", "Spike", "Riley"], :mom=>"Joyce"}
 
+# delete element in the array that is a 'value' in k-v pair
 person[:love_interests].delete("Riley")
 p person
 
-{:first_name=>"Buffy", :role=>"The Chosen One", :love_interests=>["Angelo", "Spike", "Riley"], :mom=>"Joyce"}
+{:first_name=>"Buffy", :role=>"The Chosen One", :love_interests=>["Angelo", "Spike"], :mom=>"Joyce"}
 
-
-# p person
-
-# get back to you on this! 
 
 # Enumerables and Duck Typing
 # modules - grouping together like things  with similar properties
