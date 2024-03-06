@@ -74,12 +74,12 @@ person.delete(:last_name)
 # p person
 {:first_name=>"Buffy", :role=>"The Chosen One", :love_interests=>["Angelo", "Spike", "Riley"], :mom=>"Joyce"}
 
-person.delete(:love_interests[2])
-# p person
+person[:love_interests].delete("Riley")
+p person
 
 {:first_name=>"Buffy", :role=>"The Chosen One", :love_interests=>["Angelo", "Spike", "Riley"], :mom=>"Joyce"}
 
-person[:love_interests] = person.delete(:love_interests[2])
+
 # p person
 
 # get back to you on this! 
@@ -89,7 +89,7 @@ person[:love_interests] = person.delete(:love_interests[2])
 # enumerables - module that groups things that are ITERABLE --> hashes, arrays, ranges, etc 
 # aka Duck Typing 
 
-characters = {slayer: ['Buffy'], witch: 'Willow', vampire: 'Spike'}
+characters = {slayer: 'Buffy', witch: 'Willow', vampire: 'Spike'}
 
 characters.each do |key, value|
   p "#{value}'s role is the #{key}"
