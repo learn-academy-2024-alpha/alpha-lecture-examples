@@ -129,8 +129,8 @@ class StreamingService
   # create getter and setter methods
   attr_accessor :title, :watched
 
-  def initialize(title)
-    @title = title
+  def initialize(4. 'Stranger Things')
+    @title = 5. 'Stranger Things'
     @watched = false
   end
 end
@@ -165,21 +165,22 @@ p jerry.show_data
 class Netflix < StreamingService
   attr_accessor :run_time
 
-  def initialize(title, run_time)
-    super(title)
+  def initialize(2. 'Stranger Things', run_time)
+    super calls initialize in the superclass
+    super(3. 'Stranger Things')
     @run_time = run_time
   end
 
   def show_data
     if @watched
-      "You have watched #{@title} that is #{@run_time} long"
+      "You have watched #{6. 'Stranger Things'} that is #{@run_time} long"
     else
       "You have not watched #{@title} that is #{@run_time} long"
     end
   end
 end
 
-things = Netflix.new('Stranger Things', '45 min')
+things = Netflix.new(1. 'Stranger Things', '45 min')
 #<Netflix:0x00000001046f5ef0 @title="Stranger Things", @run_time="45 min", @watched=false>
 p things.show_data 
 # "You have not watched Stranger Things that is 45 min long"
