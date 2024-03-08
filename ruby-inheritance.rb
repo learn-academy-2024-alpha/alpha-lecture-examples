@@ -127,7 +127,7 @@
 # superclass
 class StreamingService
   # create getter and setter methods
-  # attr_accessor :title, :watched
+  attr_accessor :title, :watched
 
   def initialize(title)
     @title = title
