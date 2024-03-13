@@ -13,26 +13,11 @@ followed by column_name:datatype
 no spaces between column_name & datatype!
 no commas between columns
 
-`rails new active_record_intro -d postgresql -T `
-`cd active_record_intro `
-`rails db:create`
-
-Created database 'active_record_intro_development'
-Created database 'active_record_intro_test'
-
-`rails generate model Animal category:string name:string age:integer`
-
-invoke active_record
-create db/migrate/20240313175352_create_animals.rb
-create app/models/animal.rb
-
-`rails db:migrate`
-== 20240313175352 CreateAnimals: migrating ====================================
--- create_table(:animals)
--> 0.0059s
-== 20240313175352 CreateAnimals: migrated (0.0059s) ===========================
-
-creates the schema: db/schema
+- `rails new active_record_intro -d postgresql -T `
+- `cd active_record_intro `
+- `rails db:create`
+- `rails generate model Animal category:string name:string age:integer`
+- `rails db:migrate`  --> creates the schema: db/schema
 
 ```ruby
 ActiveRecord::Schema[7.1].define(version: 2024_03_13_175352) do
